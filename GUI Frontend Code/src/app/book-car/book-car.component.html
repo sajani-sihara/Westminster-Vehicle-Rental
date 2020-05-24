@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Car | Vehicle Rental</title>
+  </head>
+  <body>
+    <img
+      class="firstBG"
+      src="/assets/images/firstBG.jpg"
+      alt="Car Driving Image"
+    />
+    <div>
+      <a href="/home"
+        ><img class="logo" src="/assets/images/logo3.png" alt="Car Logo"
+      /></a>
+      <h1>take a look at our cars</h1>
+      <h2 class="main">Book one for your next journey</h2>
+      <div>
+        <label class="search"> Make </label>
+        <select
+          class="form-control"
+          [(ngModel)]="filterMake"
+          (change)="selectedMake()"
+          [ngModelOptions]="{ standalone: true }">
+          <option *ngFor="let item of cars" [ngValue]="item">{{item.vehicleMake}}</option>
+        </select>
+      </div>
+
+      <table>
+        <tr>
+          <th>Plate</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Colour</th>
+          <th>Rate</th>
+          <th>Body</th>
+          <th>Engine</th>
+          <th>Transmission</th>
+        </tr>
+        <tr *ngFor="let getCarList of getCarLists">
+          <td>
+            <b>{{ getCarList.vehiclePlateNum }}</b>
+          </td>
+          <td>{{ getCarList.vehicleMake }}</td>
+          <td>{{ getCarList.vehicleModel }}</td>
+          <td>{{ getCarList.vehicleColour }}</td>
+          <td>{{ getCarList.vehicleRatePerDay }}</td>
+          <td>{{ getCarList.carBodyDesc }}</td>
+          <td>{{ getCarList.carEngineDesc }}</td>
+          <td>{{ getCarList.carTransmission }}</td>
+
+          <td>
+            <a href="/form-car">
+              <button class="bookingButton">
+                Book Car
+              </button>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- ng for loop to get value from the response array
+        angular data binding -->
+  </body>
+</html>
