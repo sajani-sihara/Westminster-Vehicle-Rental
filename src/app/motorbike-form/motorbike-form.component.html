@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Vehicle Rental</title>
+  </head>
+  <body>
+    <img
+      class="firstBG"
+      src="/assets/images/bike5.jpg"
+      alt="Bike Driving Image"
+    />
+    <div>
+      <a href="/home"
+        ><img class="logo" src="/assets/images/logo3.png" alt="Car Logo"
+      /></a>
+
+      <h2 class="mainBookCar">Fill this form to book your motorbike</h2>
+
+      <form class="form" action="/">
+        Schedule ID:<br />
+        <input
+          class="field"
+          id="scheduleIDFieldInput"
+          type="text"
+          name="scheduleID"
+          placeholder="Enter your schedule ID"
+          [(ngModel)]="scheduleID"
+          [ngModelOptions]="{ standalone: true }"
+        /><br /><br />
+        Customer ID:<br />
+        <input
+          class="field"
+          id = "customerIDFieldInput"
+          type="text"
+          name="customerID"
+          placeholder="Enter your customer ID"
+          [(ngModel)]="customerID"
+          [ngModelOptions]="{ standalone: true }"
+        /><br /><br />
+        Pick-Up Date:<br />
+        <input
+          class="field"
+          id = "pickUpDateFieldInput"
+          type="date"
+          name="pickUpDate"
+          [ngModel]="pickUpDate | date: 'yyyy-MM-dd'"
+          (ngModelChange)="pickUpDate = $event"
+          [ngModelOptions]="{ standalone: true }"
+        /><br /><br />
+        Drop-Off Date:<br />
+        <input
+          class="field"
+          id = "dropOffDateFieldInput"
+          type="date"
+          name="dropOffDate"
+          [ngModel]="dropOffDate | date: 'yyyy-MM-dd'"
+          (ngModelChange)="dropOffDate = $event"
+          [ngModelOptions]="{ standalone: true }"
+        /><br /><br />
+        Motorbike Plate Number:<br />
+        <input
+          class="field"
+          id="plateNumberFieldInput"
+          type="text"
+          name="vehiclePlateNum"
+          placeholder="Enter your vehicle plate"
+          [(ngModel)]="vehiclePlateNum"
+          [ngModelOptions]="{ standalone: true }"
+        /><br /><br />
+        <input
+          class="submit"
+          type="submit"
+          value="Book Motorbike"
+          (click)="CreateSchedule1()"
+        />
+      </form>
+    </div>
+  </body>
+</html>

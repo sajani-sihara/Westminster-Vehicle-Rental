@@ -1,0 +1,125 @@
+html {
+    font-family: "proxima", sans-serif;
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 410;
+    background-image: url(/assets/images/allBG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  @font-face {
+    font-family: "ForefarmersDEMO";
+    src: url("/assets/fonts/ForefarmersDEMO.ttf");
+  }
+  @font-face {
+    font-family: "proxima";
+    src: url("/assets/fonts/proxima.ttf");
+  }
+  @font-face {
+    font-family: "Opificio";
+    src: url("/assets/fonts/Opificio-Serif-regular.ttf");
+  }
+  @font-face {
+    font-family: "SummitBold-Display";
+    src: url("/assets/fonts/SummitBold-Display.ttf");
+  }
+  
+  h1 {
+    font-family: "ForefarmersDEMO";
+    text-align: center;
+    text-shadow: 4px 4px black;
+    line-height: 1;
+    color: white;
+    font-size: 8rem;
+    position: absolute;
+    top: 20%;
+    left: 23%;
+  }
+  .logo {
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    width: 230px;
+    height: 100px;
+  }
+  .firstBG {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+  .main {
+    color: white;
+    text-transform: uppercase;
+    font-family: "SummitBold-Display";
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    font-size: 27px;
+    text-shadow: 4px 4px #000;
+    position: absolute;
+    top: 58%;
+    left: 32%;
+  }
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 40px;
+    margin-left: 13%;
+  }
+  th,
+  td {
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  tr:hover {
+    background-color: #ccc;
+  }
+  th {
+    background-color: rgb(34, 39, 34);
+    color: white;
+    text-align: center;
+  }
+  .bookingButton {
+    background-color: rgb(107, 119, 107); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px 1px;
+    cursor: pointer;
+    transition: 0.03s;
+    opacity: 0.6;
+  }
+  .bookingButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.25),
+      0 17px 50px 0 rgba(0, 0, 0, 0.18);
+    opacity: 1;
+  }
+  .resetbutton{
+    background-color: rgb(227, 235, 227); /* Green */
+    border: none;
+    color: black;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 3px 6px;
+    cursor: pointer;
+    transition: 0.03s;
+    opacity: 0.6;
+  }
+  a{
+    text-decoration: none;
+  }

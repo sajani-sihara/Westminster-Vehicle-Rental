@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Motorbike | Vehicle Rental</title>
+  </head>
+  <body>
+        <img class="firstBG" src="/assets/images/bike4.jpg" alt="Car Driving Image"/>
+        <div>
+            <a href="/home"
+            ><img class="logo" src="/assets/images/logo3.png" alt="Car Logo"
+          /></a>
+          <h1>take a look at our motorbikes</h1>
+          <h2 class="main">Book one for your next journey</h2>
+        
+          <table>
+              <tr>
+                  <th>Plate</th>
+                  <th>Make</th>
+                  <th>Model</th>
+                  <th>Colour</th>
+                  <th>Rate</th>
+                  <th>Category</th>
+                  <th>Cooling</th>
+                
+              </tr>
+              <tr *ngFor="let getMotorbikeList of getMotorbikeLists">
+                <td><b>{{getMotorbikeList.vehiclePlateNum}}</b> </td>
+                <td>{{getMotorbikeList.vehicleMake}}</td>
+                <td>{{getMotorbikeList.vehicleModel}} </td>
+                <td>{{getMotorbikeList.vehicleColour}}</td>
+                <td>{{ getMotorbikeList.vehicleRatePerDay }}</td>
+          <td>{{getMotorbikeList.bikeCategory}}</td>
+          <td>{{getMotorbikeList.bikeCoolingSystem}}</td>
+               
+            
+            
+                <td><a href="/form-motorbike">
+                <button class="bookingButton">
+                  Book Motorbike
+                </button>
+              </a></td>
+              </tr>
+            </table>
+        
+        
+        </div>
+  </body>
+</html>
